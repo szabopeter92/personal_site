@@ -1,0 +1,140 @@
+*{
+
+    box-sizing: border-box;
+}
+
+body{
+
+    background: rgb(245, 244, 244);
+    color: rgb(36, 36, 36);
+    height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+    transition: background 0.2s linear;
+}
+
+body.dark{
+
+    background: rgb(36, 36, 36);
+    color: rgb(245, 244, 244);
+}
+
+body.dark .label{
+    background: rgb(228, 227, 227);
+}
+body.dark .ball{
+
+    background: rgb(36, 36, 36);
+}
+body.dark .text h1{
+
+    border-color: rgb(245, 244, 244);
+}
+
+
+
+header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header span{
+
+    margin-left: 300px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+header nav{
+
+    margin-right: 268px;
+}
+
+.container {
+
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.img{
+
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: black;
+    margin-right: 100px;
+    background: url("me.jpg") no-repeat center -50px;
+    background-size: cover;
+   
+}
+
+
+
+.text h1{
+
+    font-size: 50px;
+    border-bottom: 2px solid rgb(36, 36, 36);
+    margin:0;
+    
+}
+
+.text p{
+
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.label{
+
+    background: #111;
+    display: flex;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 5px;
+
+}
+
+.ball{
+
+    position: absolute;
+    background: #fff;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox{
+
+    opacity: 0;
+    position: absolute;
+}
+.checkbox:checked + .label .ball{
+
+    transform: translateX(24px);
+
+}
+
+.fa-moon{
+
+    color: #f1c40f;
+}
+
+.fa-sun{
+
+    color: #f39c12;
+}
